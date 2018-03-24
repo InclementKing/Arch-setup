@@ -7,6 +7,6 @@ pacstrap /mnt base base-devel
 genfstab -L /mnt >> /mnt/etc/fstab
 wget raw.githubusercontent.com/InclementKing/Arch-setup/master/chrooted.sh
 mv chrooted.sh /mnt
-echo
-echo run zsh chrooted.sh
+clear
+echo base install successful- now run bash chrooted.sh
 arch-chroot /mnt
