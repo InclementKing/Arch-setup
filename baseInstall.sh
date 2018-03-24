@@ -6,4 +6,4 @@ mount /dev/sda1 /mnt
 pacstrap /mnt base base-devel
 genfstab -L /mnt >> /mnt/etc/fstab
 echo
-echo Now run arch-chroot /mnt
+echo Now run arch-chroot /mnt, and run chrooted
