@@ -1,5 +1,5 @@
 # Arch-setup-basics
 
-1. Execute commands found in installCommands.txt for initial system install
+1. Execute baseInstall.sh on arch live-boot
 
-2. Run systemSetup.sh to optimally setup new install
+2. Run systemSetup.sh on newly installed system
