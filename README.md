@@ -1,1 +1,1 @@
-# Arch-setup-basicas
+# Arch-setup-basics
