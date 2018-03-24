@@ -8,7 +8,7 @@ echo Desktop > /etc/hostname
 echo 127.0.1.1\	Desktop.localdomain\	Desktop >> /etc/hosts
 systemctl enable dhcpcd.service
 passwd
-pacman -S grub intel-ucode
+pacman -S grub intel-ucode git
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 echo
