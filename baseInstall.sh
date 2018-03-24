@@ -8,4 +8,5 @@ genfstab -L /mnt >> /mnt/etc/fstab
 wget raw.githubusercontent.com/InclementKing/Arch-setup/master/chrooted.sh
 mv chrooted.sh /mnt
 echo
-echo Now run arch-chroot /mnt, and run chrooted
+echo run zsh chrooted.sh
+arch-chroot /mnt
