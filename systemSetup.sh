@@ -12,4 +12,4 @@ makepkg -si
 cd ~/
 rm -rf ~/git/
 
-yaourt --noconfirm google-chrome spotify pkgtools pulseaudio-ctl pulseaudio-equalizer-ladspa
+yaourt --noconfirm -s google-chrome spotify pkgtools pulseaudio-ctl pulseaudio-equalizer-ladspa
