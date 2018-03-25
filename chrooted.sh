@@ -7,18 +7,18 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 echo Desktop > /etc/hostname
 echo 127.0.1.1\	Desktop.localdomain\	Desktop >> /etc/hosts
 systemctl enable dhcpcd.service
-echo
-echo enter root password
-passwd
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+
+echo "root:root" | chpasswd
 useradd -m -g wheel ben
 echo "ben:pass" | chpasswd
 echo 'ben 	ALL=(ALL:ALL) ALL' >> /etc/sudoers
-#mv systemSetup.sh /home/ben/systemSetup.sh
-#chmod 777 /home/ben/systemSetup.sh
-chmod 777 systemSetup.sh
+
 git clone https://github.com/inclementking/arch-setup/ /home/ben/arch-setup/
-chmod -R /home/ben/arch-setup/
+
+curl -O https://download.sublimetext.com/sublimehq-pub.gpg && pacman-key --add sublimehq-pub.gpg && pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
+pacman -Syu sublime-text
+
 echo
 echo success, clear to exit chroot
