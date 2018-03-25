@@ -1,10 +1,13 @@
-mkdir git
-cd git/
+mkdir ~/git
+cd ~/git/
 git clone https://aur.archlinux.org/package-query.git
 cd package-query/
 makepkg -si
-cd ..
+
+cd ~/git/
 git clone https://aur.archlinux.org/yaourt.git
 cd yaourt/
 makepkg -si
-rm -rf *
+
+cd ~/
+rm -rf /git/
