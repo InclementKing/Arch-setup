@@ -18,3 +18,4 @@ mv systemSetup.sh /home/ben/systemSetup.sh
 chmod 777 /home/ben/systemSetup.sh
 echo
 echo success, clear to exit chroot
+reboot
