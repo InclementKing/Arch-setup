@@ -14,5 +14,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m -g wheel ben
 passwd ben
 echo 'ben 	ALL=(ALL:ALL) ALL' >> /etc/sudoers
+source systemSetup.sh
+yaourt -h
 echo
-echo now run exit
+echo success, clear to exit chroot
