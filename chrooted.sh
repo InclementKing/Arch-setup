@@ -11,5 +11,7 @@ passwd
 pacman -S grub intel-ucode git
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+useradd -m -g wheel ben
+passwd ben
 echo
 echo now run exit
