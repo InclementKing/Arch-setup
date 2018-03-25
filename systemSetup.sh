@@ -10,4 +10,4 @@ cd yaourt/
 makepkg -si
 
 cd ~/
-rm -rf /git/
+rm -rf ~/git/
