@@ -1,7 +1,7 @@
 # Arch-setup-basics
 
-Assumes working wired connection, and desired install location of /dev/sda.
+Pre install:
+  1. run 'wget bit.ly/archbase'
 
-1. Execute baseInstall.sh on arch live-boot
-
-2. Run systemSetup.sh on newly installed system
+Post install:
+  1. Run 'bash systemSetup.sh'
