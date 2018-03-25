@@ -6,11 +6,9 @@ mount /dev/sda1 /mnt
 pacstrap /mnt base base-devel grub intel-ucode git
 genfstab -L /mnt >> /mnt/etc/fstab
 wget raw.githubusercontent.com/InclementKing/Arch-setup/master/chrooted.sh
-wget raw.githubusercontent.com/InclementKing/Arch-setup/master/systemSetup.sh
 mv chrooted.sh /mnt
-mv systemSetup.sh /mnt
 clear
 echo base install successful- now run bash chrooted.sh
 arch-chroot /mnt
 echo 
-echo 
+echo after reboot, run bash systemSetup.sh

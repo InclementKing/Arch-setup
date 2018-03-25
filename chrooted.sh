@@ -8,13 +8,13 @@ echo Desktop > /etc/hostname
 echo 127.0.1.1\	Desktop.localdomain\	Desktop >> /etc/hosts
 systemctl enable dhcpcd.service
 passwd
-pacman -S grub intel-ucode git
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m -g wheel ben
 passwd ben
 echo 'ben 	ALL=(ALL:ALL) ALL' >> /etc/sudoers
-source systemSetup.sh
-yaourt -h
+wget raw.githubusercontent.com/InclementKing/Arch-setup/master/systemSetup.sh
+mv systemSetup.sh /home/ben/systemSetup.sh
+chmod 777 /home/ben/systemSetup.sh
 echo
 echo success, clear to exit chroot
