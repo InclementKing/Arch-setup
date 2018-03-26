@@ -7,7 +7,7 @@ pacstrap /mnt base base-devel grub intel-ucode git xorg i3 nvidia deluge mosh op
 genfstab -L /mnt >> /mnt/etc/fstab
 wget raw.githubusercontent.com/InclementKing/Arch-setup/master/chrooted.sh
 mv chrooted.sh /mnt
-echo base install successful- now run bash chrooted.sh
+echo base install successful- now run python chrooted.py
 arch-chroot /mnt
 echo 
 echo after reboot, run bash systemSetup.sh
