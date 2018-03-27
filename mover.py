@@ -1,6 +1,6 @@
 import os
 
-files = ['bashrc', 'gitconfig', 'xinitrc', 'Xresources']
+files = ['bashrc',  'xinitrc', 'Xresources']
 
 for i in files:
 	os.rename(os.path.expanduser'~/arch-setup/configs/dotfiles/' + i, os.path.expanduser'~/.' + i)
