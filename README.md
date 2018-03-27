@@ -1,4 +1,4 @@
-# Arch-setup-basics
+# Arch Setup
 
 Pre install:
   1. Run 'wget bit.ly/archbase'
