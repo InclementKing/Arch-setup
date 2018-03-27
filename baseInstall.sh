@@ -10,7 +10,7 @@ wget raw.githubusercontent.com/InclementKing/Arch-setup/master/chrooted.py
 mv chrooted.sh /mnt
 mv chrooted.py /mnt
 clear
-echo base install successful- now run python chrooted.py
+echo base install successful- now run bash chrooted.sh
 arch-chroot /mnt
 echo 
 echo after reboot, run bash systemSetup.sh
