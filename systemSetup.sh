@@ -14,5 +14,5 @@ rm -rf ~/git/
 
 yaourt --noconfirm -Sa google-chrome spotify pkgtools pulseaudio-ctl pulseaudio-equalizer
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
-cd ~/arch-setup/
+cd ~/archSetup/
 python mover.py
