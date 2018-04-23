@@ -12,7 +12,7 @@ makepkg -si
 cd ~/
 rm -rf ~/git/
 
-yaourt --noconfirm -Sa google-chrome spotify pkgtools pulseaudio-ctl pulseaudio-equalizer
+yaourt --noconfirm -Sa google-chrome spotify pkgtools pulseaudio-ctl pulseaudio-equalizer plex-media-server
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 cd ~/archSetup/
 python mover.py
