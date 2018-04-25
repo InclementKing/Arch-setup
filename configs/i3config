@@ -178,10 +178,10 @@ mode "media" {
 	bindsym m exec pactl set-sink-volume 0 -2%
 
 	bindsym Return mode "default"
-	bindsym Super_L mode "default"
+	bindsym Super_R mode "default"
 }
 
-bindsym Super_L mode "media"
+bindsym Super_R mode "media"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
