@@ -3,8 +3,8 @@ import os
 home = os.expanduser("~")
 configs = home + '/archSetup/configs/'
 dotfiles = configs + "dotfiles/"
-files = os.listdir(dotfiles)
 
+files = os.listdir(dotfiles)
 for file in files:
 	os.renames(dotfiles + file, home + '/.' + file)
 
