@@ -6,7 +6,9 @@ dotfiles = configs + "dotfiles/"
 
 files = os.listdir(dotfiles)
 for file in files:
-	os.renames(dotfiles + file, home + '/.' + file)
+	newFile = home + '/.' + file
+	os.renames(dotfiles + file, newFile)
+	os.chmod(newFile, 0o777)
 
 os.renames(configs + 'i3config', home + '/.i3/config')
 os.renames(configs + 'spotify.sh', home + '/.config/bscripts/spotify.sh')
