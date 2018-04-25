@@ -10,6 +10,4 @@ mv chrooted.sh /mnt
 clear
 echo base install successful- now run bash chrooted.sh
 arch-chroot /mnt
-echo 
-echo after reboot, run bash systemSetup.sh
 reboot
