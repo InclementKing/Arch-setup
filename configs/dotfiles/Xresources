@@ -1,5 +1,6 @@
 URxvt.font: xft:FiraCode-Regular
 export VISUAL=nano
+URxvt.scrollBar: false
 
 ! special
 *.foreground:   #c0b18b
