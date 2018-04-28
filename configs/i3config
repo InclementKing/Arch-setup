@@ -151,10 +151,20 @@ bindsym Mod1+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# border
+default_border pixel 1
+hide_edge_borders smart
+
+
+
+
+## custom mode definitions ##
+
 mode "media" {
 	bindsym space exec ~/.config/bscripts/spotify.sh
 	bindsym n exec xdg-open https://www.netflix.com/browse
 	bindsym y exec xdg-open https://www.youtube.com
+	bindsym p exec xdg-open https://app.plex.tv/desktop
 
 	bindsym a exec playerctl previous
 	bindsym s exec playerctl play-pause
@@ -172,16 +182,77 @@ mode "media" {
 	bindsym 9 exec pactl set-sink-volume 0 90%
 	bindsym 0 exec pactl set-sink-volume 0 100%
 
-	bindsym 1 exec pactl set-sink-voume 0 10%
-
 	bindsym k exec pactl set-sink-volume 0 +2%
 	bindsym m exec pactl set-sink-volume 0 -2%
+
 
 	bindsym Return mode "default"
 	bindsym Super_R mode "default"
 }
 
+mode "apps" {
+	# workspace switching
+	bindsym 1 workspace $ws1
+	bindsym 2 workspace $ws2
+	bindsym 3 workspace $ws3
+	bindsym 4 workspace $ws4
+	bindsym 5 workspace $ws5
+	bindsym 6 workspace $ws6
+	bindsym 7 workspace $ws7
+	bindsym 8 workspace $ws8
+	bindsym 9 workspace $ws9
+	bindsym 0 workspace $ws10
+
+	#application launching
+	bindsym s exec subl
+	bindsym Shift+s workspace $ws2; exec steam
+
+	bindsym c exec google-chrome-stable
+	bindsym Shift+c workspace $ws1; exec google-chrome-stable
+
+	bindsym t exec telegram-desktop
+	bindsym Enter exec urxvt
+
+	#layout editing
+	bindsym Tab layout tabbed
+	bindsym Control split vertical
+	bindsym Shift split horizontal
+	bindsym Shift+a focus parent
+	bindsym x kill
+
+	bindsym space exec dmenu_run
+
+	bindsym j focus left
+	bindsym k focus down
+	bindsym l focus right
+	bindsym i focus up
+
+	bindsym Shift+1 move container to workspace $ws1
+	bindsym Shift+2 move container to workspace $ws2
+	bindsym Shift+3 move container to workspace $ws3
+	bindsym Shift+4 move container to workspace $ws4
+	bindsym Shift+5 move container to workspace $ws5
+	bindsym Shift+6 move container to workspace $ws6
+	bindsym Shift+7 move container to workspace $ws7
+	bindsym Shift+8 move container to workspace $ws8
+	bindsym Shift+9 move container to workspace $ws9
+	bindsym Shift+0 move container to workspace $ws10
+
+
+	bindsym Super_L mode "default"
+}
+
+## /custom mode definitons/ ##
+
+## custom mode key binds  ##
+
 bindsym Super_R mode "media"
+bindsym Super_L mode "apps"
+
+## /custom mode key binds/  ##
+
+
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -225,4 +296,5 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
+
 exec google-chrome-stable
