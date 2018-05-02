@@ -1,5 +1,7 @@
-URxvt.font: xft:FiraCode-Regular
 export VISUAL=nano
+
+URxvt.font: xft:FiraCode-Regular
+URxvt.letterSpace: -1
 URxvt.scrollBar: false
 
 ! special
