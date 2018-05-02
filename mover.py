@@ -1,6 +1,6 @@
 import os
 
-home = os.expanduser("~")
+home = os.path.expanduser("~")
 configs = home + '/archSetup/configs/'
 dotfiles = configs + "dotfiles/"
 
